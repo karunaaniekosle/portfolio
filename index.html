@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karuna Anie Kosle | Portfolio & Projects</title>
+    <!-- Tailwind CSS Engine -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap');
+        
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #faf9f6; /* Soft, human, premium off-white */
+        }
+        .serif-font {
+            font-family: 'Playfair Display', serif;
+        }
+        .page-section {
+            display: none;
+        }
+        .page-section.active {
+            display: block;
+            animation: fadeIn 0.5s ease-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen flex flex-col selection:bg-orange-100">
+
+    <!-- NAVIGATION BAR -->
+    <header class="sticky top-0 z-40 bg-[#faf9f6]/90 backdrop-blur-md border-b border-slate-200/60">
+        <div class="max-w-5xl mx-auto px-6 h-24 flex items-center justify-between">
+            <a href="#" onclick="switchPage('home')" class="serif-font text-xl font-bold tracking-tight text-slate-950 hover:opacity-80 transition-opacity">
+                karuna anie kosle<span class="text-orange-600">.</span>
+            </a>
+            
+            <nav class="hidden md:flex items-center space-x-1 text-xs font-semibold tracking-wide text-slate-600">
+                <button onclick="switchPage('home')" class="nav-link px-4 py-2 rounded-xl transition-all" id="nav-home">Home</button>
+                <button onclick="switchPage('about')" class="nav-link px-4 py-2 rounded-xl transition-all" id="nav-about">The Story</button>
+                <button onclick="switchPage('initiatives')" class="nav-link px-4 py-2 rounded-xl transition-all" id="nav-initiatives">Financial Literacy</button>
+                <button onclick="switchPage('experience')" class="nav-link px-4 py-2 rounded-xl transition-all" id="nav-experience">Experience</button>
+                <button onclick="switchPage('interests')" class="nav-link px-4 py-2 rounded-xl transition-all" id="nav-interests">Research</button>
+                <button onclick="switchPage('credentials')" class="nav-link px-4 py-2 rounded-xl transition-all" id="nav-credentials">Credentials</button>
+                <button onclick="switchPage('resume')" class="nav-link px-4 py-2 rounded-xl transition-all" id="nav-resume">Resume</button>
+                <button onclick="switchPage('contact')" class="nav-link px-4 py-2 rounded-xl transition-all" id="nav-contact">Contact</button>
+            </nav>
+
+            <button onclick="toggleMobileMenu()" class="md:hidden p-2 text-slate-800 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[#faf9f6] border-b border-slate-200 px-6 py-6 space-y-3 font-medium text-slate-600 shadow-xl">
+            <button onclick="switchPage('home'); toggleMobileMenu()" class="block w-full text-left py-1 text-sm">Home</button>
+            <button onclick="switchPage('about'); toggleMobileMenu()" class="block w-full text-left py-1 text-sm">The Story</button>
+            <button onclick="switchPage('initiatives'); toggleMobileMenu()" class="block w-full text-left py-1 text-sm">Financial Literacy</button>
+            <button onclick="switchPage('experience'); toggleMobileMenu()" class="block w-full text-left py-1 text-sm">Experience</button>
+            <button onclick="switchPage('interests'); toggleMobileMenu()" class="block w-full text-left py-1 text-sm">Research</button>
+            <button onclick="switchPage('credentials'); toggleMobileMenu()" class="block w-full text-left py-1 text-sm">Credentials</button>
+            <button onclick="switchPage('resume'); toggleMobileMenu()" class="block w-full text-left py-1 text-sm">Resume</button>
+            <button onclick="switchPage('contact'); toggleMobileMenu()" class="block w-full text-left py-1 text-sm">Contact</button>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <main class="flex-grow max-w-5xl w-full mx-auto px-6 py-12 md:py-20">
+
+        <!-- ================= HOME PAGE ================= -->
+        <section id="page-home" class="page-section active space-y-20">
+            <div class="flex flex-col-reverse md:flex-row items-start justify-between gap-12">
+                <div class="max-w-2xl space-y-8">
+                    <h1 class="serif-font text-4xl md:text-6xl font-bold text-slate-950 tracking-tight leading-[1.1]">
+                        Building practical frameworks to balance <span class="italic text-orange-600 font-normal">real-world details</span>.
+                    </h1>
+                    <p class="text-base md:text-lg text-slate-600 leading-relaxed font-normal max-w-xl">
+                        I am a 17-year-old student from India focused on analyzing structural and educational gaps in underserved communities. Whether organizing defenses on the cricket field or designing offline tools for financial safety, I look for logic, numbers, and human connection.
+                    </p>
+                    <div class="flex flex-wrap gap-4 pt-2 text-xs font-semibold tracking-wide">
+                        <button onclick="switchPage('initiatives')" class="bg-slate-950 text-white px-6 py-4 rounded-xl hover:bg-orange-600 transition-all shadow-xs cursor-pointer">Explore Financial Literacy Project</button>
+                        <button onclick="switchPage('resume')" class="border border-slate-300 text-slate-800 px-6 py-4 rounded-xl hover:bg-slate-100 transition-colors cursor-pointer">View Full Resume</button>
+                    </div>
+                </div>
+                
+                <!-- Polaroid Style Image Box -->
+                <div class="shrink-0 relative mx-auto md:mx-0">
+                    <div class="w-48 bg-white p-3 pb-8 rounded-sm shadow-md border border-slate-200/60 transform rotate-2 hover:rotate-0 transition-transform duration-300">
+                        <div class="w-42 h-42 bg-slate-100 overflow-hidden relative flex flex-col items-center justify-center border border-slate-100">
+                            <img src="profile.jpg" alt="Karuna Anie Kosle" class="absolute inset-0 w-full h-full object-cover z-10">
+                        </div>
+                        <div class="mt-3 text-center serif-font text-xs italic text-slate-500">Karuna, 2026</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DESIGNER METRIC CARDS -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-6">
+                <div class="bg-white border border-slate-200/80 rounded-2xl p-6 shadow-xs space-y-2">
+                    <div class="serif-font text-3xl font-bold text-slate-950">400+</div>
+                    <div class="text-[11px] font-semibold uppercase tracking-wider text-slate-400">Total Volunteer Hours</div>
+                    <p class="text-xs text-slate-500 font-light leading-relaxed">Dedicated academic and administrative community support delivered across seasonal break periods.</p>
+                </div>
+                <div class="bg-white border border-slate-200/80 rounded-2xl p-6 shadow-xs space-y-2">
+                    <div class="serif-font text-3xl font-bold text-orange-600">3.5+ Yrs</div>
+                    <div class="text-[11px] font-semibold uppercase tracking-wider text-slate-400">Cricket Leadership Team Record</div>
+                    <p class="text-xs text-slate-500 font-light leading-relaxed">Active athletic frame developing defense strategies and high-pressure competitive team coordination.</p>
+                </div>
+                <div class="bg-white border border-slate-200/80 rounded-2xl p-6 shadow-xs space-y-2">
+                    <div class="serif-font text-3xl font-bold text-slate-950">4 Yrs</div>
+                    <div class="text-[11px] font-semibold uppercase tracking-wider text-slate-400">Community Impact</div>
+                    <p class="text-xs text-slate-500 font-light leading-relaxed">Sustained hands-on responsibility managing records and operational resource matching.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= THE STORY (ABOUT ME) ================= -->
+        <section id="page-about" class="page-section max-w-2xl space-y-8">
+            <div class="space-y-2">
+                <span class="text-xs font-semibold uppercase tracking-widest text-orange-600 block">The Context</span>
+                <h2 class="serif-font text-3xl md:text-4xl font-bold text-slate-950">A constant shift between two completely different worlds.</h2>
+            </div>
+            
+            <div class="text-slate-600 space-y-6 leading-relaxed font-normal text-base">
+                <p>
+                    My perspective is built on moving frequently between the high-speed energy of Mumbai and the grassroots realities of rural Pratapgarh. Living in both environments taught me early on that the biggest barrier people face isn't a lack of ambition—it's a gap in how modern systems and information are communicated to ordinary communities.
+                </p>
+                <p>
+                    I’ve always gravitated toward roles where I have to step up and make moving parts work smoothly under pressure. Leading my cricket teams as a captain taught me how to read a high-stakes situation and adjust tactics on the fly. That same execution-first mindset carries over into my community work; whether I was tracking daily cash logs at a medical clinic or managing welfare funds for our church, Maseeh Prarthana Bhavan, I found that I genuinely enjoy the responsibility of making real-world details balance.
+                </p>
+                <p>
+                    That is exactly why I founded a practical financial literacy initiative with the Asha Welfare Society. Instead of using confusing, text-heavy manuals, we designed a visual curriculum using physical play currency and mock boards to train 305 rural women and youth to navigate digital banking safely. Moving forward, I want to study economics and public policy to keep building the hands-on, scalable frameworks that open up real economic opportunities for underserved communities.
+                </p>
+            </div>
+        </section>
+
+        <!-- ================= FINANCIAL LITERACY PROJECT ================= -->
+        <section id="page-initiatives" class="page-section space-y-12">
+            <div class="space-y-2">
+                <span class="text-xs font-semibold uppercase tracking-widest text-orange-600 block">Case Study</span>
+                <h2 class="serif-font text-3xl md:text-4xl font-bold text-slate-950">The Pratapgarh Financial Literacy Initiative</h2>
+                <p class="text-slate-500 text-sm max-w-xl font-light">An experiential curriculum built around localized constraints rather than corporate templates.</p>
+            </div>
+
+            <div class="bg-white border border-slate-200 rounded-2xl p-6 md:p-10 space-y-10 shadow-xs">
+                
+                <!-- Project Specs Panel -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 border-b border-slate-100 pb-8 text-xs text-slate-600">
+                    <div class="space-y-1">
+                        <div class="text-slate-400 font-semibold uppercase tracking-wider text-[10px]">Project Directives</div>
+                        <div class="font-medium text-slate-900">Project Lead & Curriculum Designer</div>
+                        <div class="text-slate-500">Partner: Asha Welfare Society</div>
+                    </div>
+                    <div class="space-y-1">
+                        <div class="text-slate-400 font-semibold uppercase tracking-wider text-[10px]">Timeline Bounds</div>
+                        <div class="font-medium text-slate-900">Dec 2025 – Jan 2026</div>
+                        <div class="text-slate-500">(Seasonal Breaks)</div>
+                    </div>
+                    <div class="space-y-1">
+                        <div class="text-slate-400 font-semibold uppercase tracking-wider text-[10px]">Demographics Served</div>
+                        <div class="font-medium text-slate-900">143 Women | 95 Youth | 67 Children</div>
+                        <div class="text-orange-600 font-semibold">Total: 305 Active Engaged Participants</div>
+                    </div>
+                </div>
+
+                <!-- Core Impact Badges Layout Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="bg-slate-50 border border-slate-200/60 rounded-xl p-5 space-y-1">
+                        <div class="serif-font text-2xl font-bold text-slate-950">100%</div>
+                        <div class="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Ledger Transparency Maintained</div>
+                    </div>
+                    <div class="bg-slate-50 border border-slate-200/60 rounded-xl p-5 space-y-1">
+                        <div class="serif-font text-2xl font-bold text-orange-600">70.2%</div>
+                        <div class="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Verified UPI Mastery Rate</div>
+                    </div>
+                </div>
+
+                <!-- Problem & Insight Content Panels -->
+                <div class="space-y-4">
+                    <h3 class="serif-font text-xl font-bold text-slate-950">The Core Insight</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm leading-relaxed text-slate-600">
+                        <div class="space-y-2">
+                            <h4 class="font-bold text-slate-900">The Challenge</h4>
+                            <p class="font-light text-xs">Standard institutional financial literacy materials rely heavily on text density, academic banking jargon, and assumptions regarding digital infrastructure connectivity that do not hold up inside low-literacy, rural communities.</p>
+                        </div>
+                        <div class="space-y-2">
+                            <h4 class="font-bold text-slate-900">The Execution</h4>
+                            <p class="font-light text-xs">To make critical asset handling and digital smartphone banking (UPI) stick, the instructional methodology had to be tactile, visual, and entirely experiential. We used physical play currency notes for expense sorting and laminated mock QR boards to simulate phone transaction flows offline.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Operational Phases Section Layout Grid -->
+                <div class="space-y-4">
+                    <h3 class="serif-font text-xl font-bold text-slate-950">Execution Strategy</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs leading-relaxed text-slate-600">
+                        <div class="space-y-2">
+                            <div class="font-bold text-orange-600 tracking-wider uppercase text-[9px]">Phase 1 / Asset Design</div>
+                            <p class="font-light">Authored a text-light curriculum using physical models to eliminate the intimidation factor of traditional banking applications.</p>
+                        </div>
+                        <div class="space-y-2">
+                            <div class="font-bold text-slate-400 tracking-wider uppercase text-[9px]">Phase 2 / Team Mobilization</div>
+                            <p class="font-light">Pioneered a scalable "Train-the-Trainer" framework. Recruited and prepared 3 regional youth volunteers to deliver synchronized multi-cohort instruction.</p>
+                        </div>
+                        <div class="space-y-2">
+                            <div class="font-bold text-slate-400 tracking-wider uppercase text-[9px]">Phase 3 / Audited Deployment</div>
+                            <p class="font-light">Deployed across 10 camp sequences. Monitored overhead costs down to a single rupee, recording variables inside a public tracking ledger.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Syllabus Grid Table Component -->
+                <div class="space-y-4">
+                    <h3 class="serif-font text-xl font-bold text-slate-950">The Core Syllabus Matrix</h3>
+                    <div class="overflow-x-auto border border-slate-200 rounded-xl">
+                        <table class="w-full text-left text-xs border-collapse">
+                            <thead>
+                                <tr class="bg-slate-50 text-slate-600 font-semibold border-b border-slate-200">
+                                    <th class="p-4 w-1/3">Core Pillar</th>
+                                    <th class="p-4 w-2/3">Field Implementation Strategy</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-100 text-slate-600 font-normal">
+                                <tr>
+                                    <td class="p-4 font-semibold text-slate-900">Basic Banking & Account Setup</td>
+                                    <td class="p-4 font-light">Navigating bank layouts, understanding Jan Dhan accounts, and mastering deposit slips.</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-4 font-semibold text-slate-900">Savings & Budgeting Frameworks</td>
+                                    <td class="p-4 font-light">Interactive "Needs vs. Wants" classification setups using physical Gullaks (piggy banks).</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-4 font-semibold text-slate-900">Digital Payments & Transactions</td>
+                                    <td class="p-4 font-light">Live, offline smartphone simulators tracking payment structures using laminated QR mock setups.</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-4 font-semibold text-slate-900">Loans & Interest Fundamentals</td>
+                                    <td class="p-4 font-light">Demystifying the mechanics behind formal banking credit lines versus predatory local lending circles.</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-4 font-semibold text-slate-900">Fraud Awareness & Digital Safety</td>
+                                    <td class="p-4 font-light">Establishing strict PIN secrecy checklists and simulating common real-world phone phishing attempts.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Public Audit Data Ledger Embed -->
+                <div class="space-y-3 border-t border-slate-100 pt-8">
+                    <div class="flex flex-col sm:flex-row justify-between sm:items-center gap-2">
+                        <div>
+                            <h4 class="text-xs font-semibold text-slate-900 uppercase tracking-wider">Live Public Audit Data Ledger</h4>
+                            <p class="text-slate-400 text-xs font-light">Real-time expense tracking published directly from field operation accounts.</p>
+                        </div>
+                        <a href="documents/Pratapgarh Financial Literacy Initiative Ledger.xlsx" download class="text-xs bg-slate-100 hover:bg-slate-200 border border-slate-300 text-slate-800 font-medium px-4 py-2 rounded-xl transition-all inline-flex items-center shrink-0">Download Ledger Asset</a>
+                    </div>
+                    <div class="w-full border border-slate-200 rounded-xl bg-white p-1 overflow-hidden">
+                        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTfQN8mzPgDyAZf85ZonpAFpanyykq6uYTl2f0naW27TF0aZy1UJ8pt1l2cjwgKn9Q31UPqRS9wvkom/pubhtml?widget=true&amp;headers=false" class="w-full h-64 border-0 rounded-lg"></iframe>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap gap-3 pt-2 border-t border-slate-100">
+                    <a href="documents/Karuna-Financial literacy letter.pdf" target="_blank" class="bg-slate-950 hover:bg-orange-600 text-white text-xs font-semibold px-5 py-3 rounded-xl transition-all">View Endorsement Letter</a>
+                    <a href="documents/Rural Financial Inclusion Project Curriculum.pdf" target="_blank" class="border border-slate-300 hover:bg-slate-50 text-slate-800 text-xs font-semibold px-5 py-3 rounded-xl transition-all">Download Official Syllabus PDF</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= LEADERSHIP & EXPERIENCE ================= -->
+        <section id="page-experience" class="page-section space-y-12">
+            <div class="space-y-2">
+                <span class="text-xs font-semibold uppercase tracking-widest text-orange-600 block">Commitments</span>
+                <h2 class="serif-font text-3xl md:text-4xl font-bold text-slate-950">Leadership & Experience</h2>
+                <p class="text-slate-500 text-sm max-w-xl font-light">Athletic organization, community mentorship coordinates, and operational bookkeeping roles.</p>
+            </div>
+
+            <div class="space-y-10">
+                
+                <!-- CARD 1: CRICKET COMPONENT -->
+                <div class="bg-white border border-slate-200 rounded-2xl p-6 md:p-8 space-y-6 shadow-xs">
+                    <div class="flex flex-col sm:flex-row justify-between items-start gap-2 border-b border-slate-100 pb-4">
+                        <div class="space-y-1">
+                            <span class="text-[10px] font-bold text-orange-600 uppercase tracking-widest">Athletics & Management</span>
+                            <h3 class="serif-font text-2xl font-bold text-slate-950">Elite Women's Cricket</h3>
+                            <p class="text-xs font-medium text-slate-500">District & Zonal Team Captain | 2022 – Present</p>
+                        </div>
+                    </div>
+                    
+                    <p class="text-sm text-slate-600 leading-relaxed font-light">
+                        Over 3.5 years competing in high-pressure sports environments, directing tactical field coordination, defensive lineups, and athletic setups under pressure.
+                    </p>
+
+                    <div class="space-y-4">
+                        <h4 class="text-xs font-semibold text-slate-900 uppercase tracking-wider">Mumbai Cricket Association (MCA) Selection Highlights</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs font-normal text-slate-600">
+                            <div class="bg-slate-50 p-4 rounded-xl border border-slate-200/40 space-y-1">
+                                <span class="font-semibold text-slate-950 block">MCA U-19 Summer Camp (2026)</span>
+                                <p class="text-[11px] font-light text-slate-500">Ghatkopar Jolly Gymkhana; official tournament runner-up frame.</p>
+                            </div>
+                            <div class="bg-slate-50 p-4 rounded-xl border border-slate-200/40 space-y-1">
+                                <span class="font-semibold text-slate-950 block">MCA U-17 Camp Series</span>
+                                <p class="text-[11px] font-light text-slate-500">Selected consecutively for developmental frames at Nerul Gymkhana (2024) and Chembur Gymkhana (2025).</p>
+                            </div>
+                            <div class="bg-slate-50 p-4 rounded-xl border border-slate-200/40 space-y-1">
+                                <span class="font-semibold text-slate-950 block">MCA U-17 Talent Hunt</span>
+                                <p class="text-[11px] font-light text-slate-500">Identified as a state competitive asset during structural trials at NMSA Vashi.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="text-xs text-slate-600 font-light border-l-2 border-orange-500 pl-4 py-0.5">
+                        <strong>Collegiate Frame:</strong> Anchored the top-order batting rotation for the G.N. Khalsa College varsity team to secure the Runner-Up title within the Maharashtra Directorate of Sports & Youth Services Tournament.
+                    </p>
+
+                    <!-- Cricket Image Frame -->
+                    <div class="w-full bg-slate-50 rounded-xl border border-slate-200/60 flex flex-col items-center justify-center relative overflow-hidden h-64 shadow-inner">
+                        <img src="documents/cricket_action.jpg" alt="Cricket Match" class="absolute inset-0 w-full h-full object-cover">
+                    </div>
+
+                    <div class="flex flex-wrap gap-x-6 gap-y-2 text-[11px] font-semibold text-orange-600 pt-2 border-t border-slate-100">
+                        <a href="documents/Karuna- cricket district certificate.pdf" target="_blank" class="hover:underline">District Certificate Assets &rarr;</a>
+                        <a href="documents/Karuna-zonal cricket certificate.pdf" target="_blank" class="hover:underline">Zonal Merit Certificate &rarr;</a>
+                        <a href="documents/Karuna-inter college cricket certificate.pdf" target="_blank" class="hover:underline">Inter-College Certificate Frame &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- GRID FOR COMMUNITY & OPERATIONAL ROLES -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    
+                    <!-- ASHA WELFARE VOLUNTEERING -->
+                    <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-xs flex flex-col justify-between space-y-4">
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-start text-xs">
+                                <span class="text-[10px] font-bold text-orange-600 uppercase tracking-wider">Mentorship</span>
+                                <span class="text-slate-400 text-[11px]">2022 – Present</span>
+                            </div>
+                            <div>
+                                <h4 class="serif-font text-lg font-bold text-slate-950">Asha Welfare Society</h4>
+                                <p class="text-xs text-slate-500 font-medium">Community Educator & Coordinator</p>
+                            </div>
+                            <ul class="text-xs text-slate-600 space-y-2 list-none font-light">
+                                <li class="border-b border-slate-50 pb-1.5">• Provided structured academic teaching support for under-resourced learning structures during summer and winter breaks over a sustained 4-year commitment.</li>
+                                <li class="border-b border-slate-50 pb-1.5">• Realized a documented 35% average metrics improvement via targeted curriculum redesign.</li>
+                                <li>• Promoted to Coordinator level to direct schedule scaling and volunteer matching.</li>
+                            </ul>
+                        </div>
+                        <div class="pt-4 border-t border-slate-100 text-[11px]">
+                            <a href="documents/Karuna- asha welfare letter.pdf" target="_blank" class="text-orange-600 font-semibold hover:underline">Verification Letter &rarr;</a>
+                        </div>
+                    </div>
+                    
+                    <!-- KHOSLA CLINIC BOOKKEEPING -->
+                    <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-xs flex flex-col justify-between space-y-4">
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-start text-xs">
+                                <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Bookkeeping</span>
+                                <span class="text-slate-400 text-[11px]">2023 – 2025</span>
+                            </div>
+                            <div>
+                                <h4 class="serif-font text-lg font-bold text-slate-950">Khosla Clinic</h4>
+                                <p class="text-xs text-slate-500 font-medium">Finance & Operations Assistant</p>
+                            </div>
+                            <ul class="text-xs text-slate-600 space-y-2 list-none font-light">
+                                <li class="border-b border-slate-50 pb-1.5">• Administered systematic ledger entry pipelines tracking transactional workflows and general operations.</li>
+                                <li class="border-b border-slate-50 pb-1.5">• Balanced a monthly cash flow baseline of ₹35,000 against localized overhead allocations.</li>
+                                <li>• Maintained precise inventory log sheets to minimize pharmaceutical supply expiry waste variables.</li>
+                            </ul>
+                        </div>
+                        <div class="pt-4 border-t border-slate-100 text-[11px]">
+                            <a href="documents/Karuna- clinic operations letter.pdf" target="_blank" class="text-orange-600 font-semibold hover:underline">Validation Asset &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- CHURCH TREASURER -->
+                    <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-xs flex flex-col justify-between space-y-4">
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-start text-xs">
+                                <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Governance</span>
+                                <span class="text-slate-400 text-[11px]">2022 – 2023</span>
+                            </div>
+                            <div>
+                                <h4 class="serif-font text-lg font-bold text-slate-950">Maseeh Prarthana Bhavan</h4>
+                                <p class="text-xs text-slate-500 font-medium">Elected Church Treasurer</p>
+                            </div>
+                            <ul class="text-xs text-slate-600 space-y-2 list-none font-light">
+                                <li class="border-b border-slate-50 pb-1.5">• Supervised transparent structural bookkeeping records for local philanthropic contributions.</li>
+                                <li class="border-b border-slate-50 pb-1.5">• Maintained systematic community fund allocations with high clarity and balance logs.</li>
+                                <li>• Prepared clear ledger balance statements to coordinate seasonal aid and resource distribution lines.</li>
+                            </ul>
+                        </div>
+                        <div class="pt-4 border-t border-slate-100 text-[11px]">
+                            <a href="documents/Karuna- Church letter.pdf" target="_blank" class="text-orange-600 font-semibold hover:underline">Board Authorization &rarr;</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= INTERESTS & RESEARCH AREAS ================= -->
+        <section id="page-interests" class="page-section space-y-8">
+            <div class="space-y-2">
+                <span class="text-xs font-semibold uppercase tracking-widest text-orange-600 block">Focus Landscape</span>
+                <h2 class="serif-font text-3xl font-bold text-slate-950">Academic Interests & Research Areas</h2>
+                <p class="text-slate-500 text-sm max-w-xl font-light">Analytical disciplines targeted for long-term policy and development tracks.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div class="p-6 bg-white border border-slate-200 rounded-xl space-y-2">
+                    <h4 class="font-semibold text-slate-950 text-sm">Development Economics</h4>
+                    <p class="text-slate-500 text-xs font-light leading-relaxed">Investigating infrastructure gaps, localized micro-capital lines, and systemic accessibility parameters inside rural economic environments.</p>
+                </div>
+                <div class="p-6 bg-white border border-slate-200 rounded-xl space-y-2">
+                    <h4 class="font-semibold text-slate-950 text-sm">Public Policy & Financial Inclusion</h4>
+                    <p class="text-slate-500 text-xs font-light leading-relaxed">Analyzing the long-term community adoption rates of modern digital transaction layers across regions facing low-literacy baselines.</p>
+                </div>
+                <div class="p-6 bg-white border border-slate-200 rounded-xl space-y-2">
+                    <h4 class="font-semibold text-slate-950 text-sm">Behavioral Finance Models</h4>
+                    <p class="text-slate-500 text-xs font-light leading-relaxed">Evaluating visual-first instructional frameworks engineered to clear technological anxiety for non-textual users.</p>
+                </div>
+                <div class="p-6 bg-white border border-slate-200 rounded-xl space-y-2">
+                    <h4 class="font-semibold text-slate-950 text-sm">Social Ledger Systems</h4>
+                    <p class="text-slate-500 text-xs font-light leading-relaxed">Structuring open, transparent operational auditing metrics for field deployment setups inside civic groups.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= CREDENTIALS INDEX ================= -->
+        <section id="page-credentials" class="page-section space-y-8">
+            <div class="space-y-2">
+                <span class="text-xs font-semibold uppercase tracking-widest text-orange-600 block">Verification Directory</span>
+                <h2 class="serif-font text-3xl font-bold text-slate-950">Certificates & Educational Records</h2>
+            </div>
+
+            <!-- Harvard edX Feature Card -->
+            <div class="bg-slate-950 text-white rounded-2xl p-6 md:p-8 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 shadow-md">
+                <div class="space-y-2">
+                    <span class="text-[9px] font-bold tracking-widest text-orange-400 bg-slate-900 px-2.5 py-1 rounded-md uppercase">Harvard edX Professional Merit</span>
+                    <h4 class="serif-font text-xl font-bold">Entrepreneurship in Emerging Economies</h4>
+                    <p class="text-xs text-slate-400 font-light max-w-xl">Analytical study covering venture scaling strategies, structural market alignment constraints, and social impact execution frameworks inside developing regions.</p>
+                </div>
+                <a href="documents/Harvard Entrepreneurship Edx Certificate.pdf" target="_blank" class="bg-orange-600 hover:bg-orange-500 text-white text-xs font-semibold px-5 py-3 rounded-xl transition-colors shrink-0">Open Certificate &rarr;</a>
+            </div>
+
+            <!-- Master Document Log Table -->
+            <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden text-xs shadow-xs">
+                <div class="p-4 bg-slate-50 border-b border-slate-200 font-semibold text-slate-500 uppercase tracking-wider text-[10px]">
+                    Master File Asset Ledger
+                </div>
+                <div class="divide-y divide-slate-100 font-normal text-slate-600">
+                    
+                    <!-- Class 12 Certificate Row -->
+                    <div class="p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-slate-50/10">
+                        <div class="space-y-0.5">
+                            <span class="font-medium text-slate-900 block">1. Higher Secondary Certificate (HSC) Academic Records</span>
+                            <span class="text-[10px] text-slate-400 block font-light">Official Class 12 matriculation matrix under the Maharashtra State Board.</span>
+                        </div>
+                        <a href="documents/Karuna 12th marksheet.pdf" target="_blank" class="text-orange-600 font-medium hover:underline shrink-0">Karuna 12th marksheet.pdf &rarr;</a>
+                    </div>
+
+                    <!-- Class 10 Certificate Row -->
+                    <div class="p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                        <div class="space-y-0.5">
+                            <span class="font-medium text-slate-900 block">2. Secondary School Certificate (SSC) Academic Records</span>
+                            <span class="text-[10px] text-slate-400 block font-light">Official Class 10 board evaluation records.</span>
+                        </div>
+                        <a href="documents/Karuna 10th marksheet.pdf" target="_blank" class="text-orange-600 font-medium hover:underline shrink-0">Karuna 10th marksheet.pdf &rarr;</a>
+                    </div>
+
+                    <!-- Athletic Block -->
+                    <div class="p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2 bg-slate-50/30">
+                        <div class="space-y-0.5">
+                            <span class="font-medium text-slate-900 block">3. District & Zonal Cricket Tournament Merit Suite</span>
+                            <span class="text-[10px] text-slate-400 block font-light">Official certification records validation framework.</span>
+                        </div>
+                        <div class="flex flex-col text-right text-[11px] font-medium space-y-1">
+                            <a href="documents/Karuna- cricket district certificate.pdf" target="_blank" class="text-orange-600 hover:underline">District Records &rarr;</a>
+                            <a href="documents/Karuna-zonal cricket certificate.pdf" target="_blank" class="text-orange-600 hover:underline">Zonal Records &rarr;</a>
+                            <a href="documents/Karuna-inter college cricket certificate.pdf" target="_blank" class="text-orange-600 hover:underline">Inter-College Records &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Project Verification Block -->
+                    <div class="p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                        <span class="font-medium text-slate-900">4. Financial Inclusion Initiative Field Validation Record</span>
+                        <a href="documents/Karuna-Financial literacy letter.pdf" target="_blank" class="text-orange-600 hover:underline">Karuna-Financial literacy letter.pdf &rarr;</a>
+                    </div>
+                    <div class="p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2 bg-slate-50/30">
+                        <span class="font-medium text-slate-900">5. Rural Financial Literacy Curriculum Core Model Asset</span>
+                        <a href="documents/Rural Financial Inclusion Project Curriculum.pdf" target="_blank" class="text-orange-600 hover:underline">Rural Financial Inclusion Project Curriculum.pdf &rarr;</a>
+                    </div>
+                    <div class="p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                        <span class="font-medium text-slate-900">6. Asha Welfare Society Institutional Reference Letter</span>
+                        <a href="documents/Karuna- asha welfare letter.pdf" target="_blank" class="text-orange-600 hover:underline">Karuna- asha welfare letter.pdf &rarr;</a>
+                    </div>
+                    <div class="p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2 bg-slate-50/30">
+                        <span class="font-medium text-slate-900">7. Khosla Clinic Operational Log Validation Sheet</span>
+                        <a href="documents/Karuna- clinic operations letter.pdf" target="_blank" class="text-orange-600 hover:underline">Karuna- clinic operations letter.pdf &rarr;</a>
+                    </div>
+                    <div class="p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                        <span class="font-medium text-slate-900">8. Maseeh Prarthana Bhavan Governance Balance Letter</span>
+                        <a href="documents/Karuna- Church letter.pdf" target="_blank" class="text-orange-600 hover:underline">Karuna- Church letter.pdf &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= MASTER RESUME SECTION ================= -->
+        <section id="page-resume" class="page-section space-y-6">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-200 pb-4">
+                <h2 class="serif-font text-3xl font-bold text-slate-950">Curriculum Vitae</h2>
+                <a id="resume-download-btn" href="documents/Karuna_Anie_Kosle_Resume.pdf" download class="bg-slate-950 text-white text-xs font-semibold px-5 py-3 rounded-xl hover:bg-orange-600 transition-colors inline-flex items-center space-x-2 shrink-0">
+                    <span>Download Resume PDF</span>
+                </a>
+            </div>
+
+            <!-- PDF Embedding Layout -->
+            <div class="w-full bg-white border border-slate-200 rounded-2xl p-2 shadow-xs h-[780px] relative overflow-hidden">
+                <iframe src="documents/Karuna_Anie_Kosle_Resume.pdf" class="w-full h-full border-0 rounded-xl" title="Karuna Anie Kosle Resume Vault"></iframe>
+            </div>
+        </section>
+
+        <!-- ================= CONTACT PAGE ================= -->
+        <section id="page-contact" class="page-section space-y-8">
+            <div class="max-w-xl space-y-2">
+                <h2 class="serif-font text-3xl font-bold text-slate-950">Connect</h2>
+                <p class="text-slate-600 text-sm font-light">
+                    Reach out via the verified personal channels below for academic coordinates or file review coordination:
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 text-xs font-normal">
+                <div class="border border-slate-200 bg-white p-6 rounded-xl space-y-1">
+                    <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider">Direct Email Address</span>
+                    <a href="mailto:karunaaniekosle@gmail.com" class="text-orange-600 font-semibold text-sm hover:underline block break-all pt-0.5">karunaaniekosle@gmail.com</a>
+                </div>
+                <div class="border border-slate-200 bg-white p-6 rounded-xl space-y-1">
+                    <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider">Professional Index</span>
+                    <a href="https://linkedin.com/in/karuna-anie-kosle-703315416" target="_blank" class="text-slate-950 font-semibold text-sm hover:underline block pt-0.5 break-all">linkedin.com/in/karuna-anie-kosle-703315416</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-slate-200 bg-white py-8 text-center text-[10px] text-slate-400 uppercase tracking-widest font-semibold mt-auto">
+        &copy; 2026 Karuna Anie Kosle. All core project sets and documentation frameworks are verified.
+    </footer>
+
+    <!-- INTERACTION LOGIC ENGINE -->
+    <script>
+        function switchPage(pageId) {
+            const pages = document.querySelectorAll('.page-section');
+            pages.forEach(page => page.classList.remove('active'));
+
+            const links = document.querySelectorAll('.nav-link');
+            links.forEach(link => {
+                link.classList.remove('bg-slate-950', 'text-white', 'shadow-xs');
+                link.classList.add('text-slate-600', 'hover:text-slate-950');
+            });
+
+            const targetPage = document.getElementById('page-' + pageId);
+            if (targetPage) {
+                targetPage.classList.add('active');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+
+            const targetNavLink = document.getElementById('nav-' + pageId);
+            if (targetNavLink) {
+                targetNavLink.classList.remove('text-slate-600', 'hover:text-slate-950');
+                targetNavLink.classList.add('bg-slate-950', 'text-white', 'shadow-xs');
+            }
+        }
+
+        function toggleMobileMenu() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            switchPage('home');
+        });
+    </script>
+</body>
+</html>
